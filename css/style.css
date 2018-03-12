@@ -1,0 +1,123 @@
+.grid > * {
+  padding: 2rem;
+}
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Quattrocento', serif;
+}
+
+/*Main grids*/
+.header {
+  grid-area: header;
+  background-color: #8e1923;
+  
+}
+.banner {
+  grid-area: banner;
+  background-color: #d36565;
+  min-height: 250px;
+}
+
+.work, .skills {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 20px; 
+  grid-template-columns: 1fr;
+  grid-template-rows: 75px 200px 200px 200px;  
+}
+.work {
+  grid-area: work;
+  background-color: lightgrey;
+  grid-template-areas:
+    "title" 
+    "project1"
+    "project2"
+    "project3";
+}
+.skills {
+  grid-area: skills;
+  background-color: white;
+  grid-template-areas:
+    "title" 
+    "frontskills"
+    "backskills"
+    "otherskills";
+}
+.footer {
+  grid-area: footer;
+  background-color: grey;
+}
+
+/*Sub grids*/
+.title {
+  grid-area: title;
+  text-decoration: underline;  
+}
+.project1, .project2, .project3, .frontskills, .backskills, .otherskills {
+  border: solid;
+  max-width: 300px;
+}
+
+.project1 {
+  grid-area: project1;
+}
+.project2 {
+  grid-area: project2;
+}
+.project3 {
+  grid-area: project3;
+}
+.frontskills {
+  grid-area: frontskills;
+}
+.backskills {
+  grid-area: backskills;
+}
+.otherskills {
+  grid-area: otherskills;
+}
+
+/*@media screen and (min-width: 40em) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 5rem auto auto;
+    grid-template-areas:
+      "header    banner banner"
+      "work work    skills"
+      "footer  footer     footer";
+    grid-gap: 1rem;
+  }
+  */
+ @media screen and (min-width: 60em) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 75px 500px 500px 500px auto;
+    grid-template-areas:
+      "header header header"
+      "banner banner banner"
+      "work work work"
+      "skills skills skills"
+      "footer footer footer";
+    /*grid-gap: 1rem;*/
+    /*min-height: 100vh;*/  
+  }
+  .work, .skills {
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 75px auto;    
+  }
+  .work {
+    grid-template-areas:
+        "title title title" 
+        "project1 project2 project3"; 
+  }
+  .skills {
+    grid-template-areas:
+      "title title title" 
+      "frontskills backskills otherskills";
+  }  
+}
