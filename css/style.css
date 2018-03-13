@@ -28,7 +28,8 @@ img {
   display: grid;
   grid-area: banner;
   background-color: #d36565;
-  min-height: 400px;
+  min-height: 640px;
+  padding: 0;
   justify-items: center;
   align-content: space-evenly;
   grid-template-columns: 1fr;
@@ -45,7 +46,7 @@ img {
   grid-column-gap: 50px;
   grid-row-gap: 20px; 
   grid-template-columns: 1fr;
-  grid-template-rows: 75px 200px 200px 200px;  
+  grid-template-rows: 75px auto auto auto;  
 }
 .work {
   grid-area: work;
@@ -79,6 +80,32 @@ img {
   border: solid;
   max-width: 300px;
 }
+.project1, .project2, .project3 {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 25px auto;
+  grid-template-areas: 
+    "picon"
+    "ptitle"
+    "pmenu"  
+}
+
+.projecticon {
+  grid-area: picon;
+  min-height: 100px;
+  margin: 15px;
+
+}
+.projecttitle {
+  grid-area: ptitle;
+  font-size: 24px;
+  margin: 15px;
+}
+.projectmenu {
+  grid-area: pmenu;
+}
 /*Banner grid elements*/
 .bannerlogo {
   grid-area: blogo;
@@ -103,6 +130,7 @@ img {
 .bannername {
   grid-area: bname;
   font-size: 50px;
+  padding: 0;
 }
 .bannersummary {
   grid-area: bsummary;
@@ -111,6 +139,7 @@ img {
 /*Work grid elements*/
 .project1 {
   grid-area: project1;
+ 
 }
 .project2 {
   grid-area: project2;
@@ -141,14 +170,79 @@ img {
     grid-gap: 1rem;
   }
   */
- @media screen and (min-width: 60em) {
+/*Styles popup window*/
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+@media screen and (min-width: 410px) {
+  .banner {
+    min-height: 700px;
+  }
+}
+
+/*Styles for grid on larger screen*/
+
+@media screen and (min-width: 940px) {
   .grid {  
     display: grid;
     margin: 0;
     padding: 0;
     list-style: none;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 75px 400px 500px 500px auto;
+    grid-template-rows: 75px 650px auto 500px auto;
     grid-template-areas:
       "header header header"
       "banner banner banner"
@@ -161,7 +255,7 @@ img {
   .work, .skills {
     display: grid;
     grid-row-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, auto);
     grid-template-rows: 75px auto;    
   }
   .work {
