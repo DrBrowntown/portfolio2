@@ -20,6 +20,7 @@ body {
 }
 
 .work, .skills {
+  justify-items: center;
   display: grid;
   grid-column-gap: 50px;
   grid-row-gap: 20px; 
@@ -57,6 +58,8 @@ body {
 .project1, .project2, .project3, .frontskills, .backskills, .otherskills {
   border: solid;
   max-width: 300px;
+ 
+
 }
 
 .project1 {
@@ -92,7 +95,12 @@ body {
   */
  @media screen and (min-width: 60em) {
   .grid {
+    
+   
     display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 75px 500px 500px 500px auto;
     grid-template-areas:
