@@ -1,26 +1,48 @@
 .grid > * {
-  padding: 2rem;
+  padding: 5px;
 }
 body {
   margin: 0;
   text-align: center;
   font-family: 'Quattrocento', serif;
 }
+a {
+  color: white;
+  font-size: 25px;
+  margin: 20px;
+}
+
+img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
 
 /*Main grids*/
 .header {
   grid-area: header;
   background-color: #8e1923;
+
   
 }
 .banner {
+  display: grid;
   grid-area: banner;
   background-color: #d36565;
-  min-height: 250px;
+  min-height: 400px;
+  justify-items: center;
+  align-content: space-evenly;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 75px 150px;
+  grid-template-areas:
+    "blogo"
+    "bname"
+    "bsummary"
 }
 
 .work, .skills {
-  justify-items: center;
+  justify-items: center;  
   display: grid;
   grid-column-gap: 50px;
   grid-row-gap: 20px; 
@@ -58,10 +80,35 @@ body {
 .project1, .project2, .project3, .frontskills, .backskills, .otherskills {
   border: solid;
   max-width: 300px;
- 
-
 }
-
+/*Banner grid elements*/
+.bannerlogo {
+  grid-area: blogo;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px;
+  grid-template-areas:
+  "rounded"
+}
+.rounded{
+  grid-area: rounded;
+}
+.bannername {
+  grid-area: bname;
+}
+.bannersummary {
+  grid-area: bsummary;
+}
+/*Work grid elements*/
 .project1 {
   grid-area: project1;
 }
@@ -71,6 +118,7 @@ body {
 .project3 {
   grid-area: project3;
 }
+/*Skills grid elements*/
 .frontskills {
   grid-area: frontskills;
 }
@@ -94,9 +142,7 @@ body {
   }
   */
  @media screen and (min-width: 60em) {
-  .grid {
-    
-   
+  .grid {  
     display: grid;
     margin: 0;
     padding: 0;
@@ -127,5 +173,8 @@ body {
     grid-template-areas:
       "title title title" 
       "frontskills backskills otherskills";
+  }
+  .bannersummary {
+    max-width: 600px;
   }  
 }
