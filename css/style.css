@@ -22,9 +22,7 @@ img {
 /*Main grids*/
 .header {
   grid-area: header;
-  background-color: #8e1923;
-
-  
+  background-color: #8e1923;  
 }
 .banner {
   display: grid;
@@ -34,7 +32,7 @@ img {
   justify-items: center;
   align-content: space-evenly;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 75px 150px;
+  grid-template-rows: 75px 75px 100px;
   grid-template-areas:
     "blogo"
     "bname"
@@ -104,9 +102,11 @@ img {
 }
 .bannername {
   grid-area: bname;
+  font-size: 50px;
 }
 .bannersummary {
   grid-area: bsummary;
+  font-size: 24px;
 }
 /*Work grid elements*/
 .project1 {
@@ -148,7 +148,7 @@ img {
     padding: 0;
     list-style: none;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 75px 500px 500px 500px auto;
+    grid-template-rows: 75px 400px 500px 500px auto;
     grid-template-areas:
       "header header header"
       "banner banner banner"
@@ -176,5 +176,8 @@ img {
   }
   .bannersummary {
     max-width: 600px;
-  }  
+  } 
+  .header {
+    padding-top: 25px;
+  } 
 }
