@@ -84,12 +84,12 @@ ul {
   border: solid;
   max-width: 300px;
   min-width: 340px;
+  min-height: 250px;
 }
 .project1, .project2, .project3 {
   display: grid;
   justify-items: center;
   margin-bottom: 10px;
-
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas: 
@@ -102,7 +102,6 @@ ul {
   grid-area: picon;
   min-height: 100px;
   margin: 15px;
-
 }
 .projecttitle {
   grid-area: ptitle;
@@ -114,10 +113,8 @@ ul {
 }
 .frontskills, .backskills, .otherskill {
   display: grid;
-  justify-items: center;
+  justify-items: center; 
   
- 
-  min-height: 200px;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas:
@@ -226,7 +223,7 @@ ul {
     padding: 0;
     list-style: none;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 75px 600px auto 500px auto;
+    grid-template-rows: 75px 600px auto auto auto;
     grid-template-areas:
       "header header header"
       "banner banner banner"
@@ -261,5 +258,8 @@ ul {
   } 
   .header {
     padding-top: 25px;
+  }
+  .frontskills, .backskills, .otherskills  {
+    margin-bottom: 15px;
   } 
 }
