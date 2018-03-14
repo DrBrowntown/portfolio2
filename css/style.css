@@ -27,7 +27,8 @@ img {
 .banner {
   display: grid;
   grid-area: banner;
-  background-color: #d36565;
+  background-color: #383a3d;
+  color: white;
   min-height: 640px;
   padding: 0;
   justify-items: center;
@@ -84,8 +85,9 @@ img {
   display: grid;
   justify-items: center;
   margin-bottom: 10px;
+  min-width: 340px;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 25px auto;
+  grid-template-rows: auto auto auto;
   grid-template-areas: 
     "picon"
     "ptitle"
@@ -132,12 +134,13 @@ img {
 }
 .bannername {
   grid-area: bname;
-  font-size: 50px;
+  font-size: 60px;
   padding: 0;
 }
 .bannersummary {
   grid-area: bsummary;
   font-size: 24px;
+  max-width: 360px;
 }
 /*Work grid elements*/
 .project1 {
@@ -183,7 +186,7 @@ img {
 
 /*Styles for grid on larger screen*/
 
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 1235px) {
   .grid {  
     display: grid;
     margin: 0;
@@ -217,7 +220,7 @@ img {
       "frontskills backskills otherskills";
   }
   .bannersummary {
-    max-width: 600px;
+    max-width: 510px;
   }
   .bannerlogo {
     grid-template-rows: 200px 75px 100px;
