@@ -73,11 +73,16 @@ ul {
 .footer {
   grid-area: footer;
   background-color: grey;
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
+  
+}
+.contacticon{
+  max-height: 50px;
+  padding-top: 5px;
 
+}
+.contacticon img{
+
+  
 }
 
 /*Sub grids*/
@@ -242,7 +247,6 @@ ul {
   .work, .skills {
     display: grid;
     grid-row-gap: 0;
-
     grid-template-columns: repeat(5, auto);
     grid-template-rows: auto auto;    
   }
@@ -266,7 +270,11 @@ ul {
   .header {
     padding-top: 25px;
   }
+  .project1, .project2, .project3 {
+    margin-bottom: 15px;
+  }
   .frontskills, .backskills, .otherskills  {
     margin-bottom: 15px;
-  } 
+  }
+  
 }
