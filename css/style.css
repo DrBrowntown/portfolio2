@@ -73,6 +73,11 @@ ul {
 .footer {
   grid-area: footer;
   background-color: grey;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+
 }
 
 /*Sub grids*/
@@ -106,7 +111,7 @@ ul {
 .projecttitle {
   grid-area: ptitle;
   font-size: 24px;
-  margin: 15px;
+  margin-top: 30px;
 }
 .projectmenu {
   grid-area: pmenu;
@@ -128,10 +133,12 @@ ul {
   min-height: 50px;
   max-height: 50px;
   margin-top: 20px;
+
 }
 .skilltitle {
   grid-area: stitle;
   font-size: 24px;
+
 }
 .skilllist {
   grid-area: slist;
@@ -140,7 +147,6 @@ ul {
 
 /*Banner grid elements*/
 .bannerlogo {
-
   grid-area: blogo;
   width: 200px;
   height: 200px;
@@ -222,7 +228,7 @@ ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto;
     grid-template-rows: 75px 600px auto auto auto;
     grid-template-areas:
       "header header header"
@@ -235,19 +241,20 @@ ul {
   }
   .work, .skills {
     display: grid;
-    grid-row-gap: 10px;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: 75px auto;    
+    grid-row-gap: 0;
+
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: auto auto;    
   }
   .work {
     grid-template-areas:
-        "title title title" 
-        "project1 project2 project3"; 
+        "title title title title title" 
+        ". project1 project2 project3 ."; 
   }
   .skills {
     grid-template-areas:
-      "title title title" 
-      "frontskills backskills otherskills";
+      "title title title title title" 
+      ". frontskills backskills otherskills .";
   }
   .bannersummary {
     max-width: 510px;
