@@ -18,6 +18,9 @@ img {
     height: 100%;
     width: auto;
 }
+ul {
+  list-style-type: none;
+}
 
 /*Main grids*/
 .header {
@@ -80,12 +83,13 @@ img {
 .project1, .project2, .project3, .frontskills, .backskills, .otherskills {
   border: solid;
   max-width: 300px;
+  min-width: 340px;
 }
 .project1, .project2, .project3 {
   display: grid;
   justify-items: center;
   margin-bottom: 10px;
-  min-width: 340px;
+
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas: 
@@ -108,6 +112,35 @@ img {
 .projectmenu {
   grid-area: pmenu;
 }
+.frontskills, .backskills, .otherskill {
+  display: grid;
+  justify-items: center;
+  
+ 
+  min-height: 200px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "sicon"
+    "stitle"
+    "slist"
+}
+
+.skillicon {
+  grid-area: sicon;
+  min-height: 50px;
+  max-height: 50px;
+  margin-top: 20px;
+}
+.skilltitle {
+  grid-area: stitle;
+  font-size: 24px;
+}
+.skilllist {
+  grid-area: slist;
+  margin-right: 40px;
+}
+
 /*Banner grid elements*/
 .bannerlogo {
 
