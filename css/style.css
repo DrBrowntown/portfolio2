@@ -72,7 +72,7 @@ ul {
 }
 .footer {
   grid-area: footer;
-  background-color: grey;
+  background-color: #383a3d;
   
 }
 .contacticon{
@@ -103,7 +103,6 @@ ul {
     "ptitle"
     "pmenu"  
 }
-
 .projecticon {
   grid-area: picon;
   min-height: 100px;
@@ -134,12 +133,10 @@ ul {
   min-height: 50px;
   max-height: 50px;
   margin-top: 20px;
-
 }
 .skilltitle {
   grid-area: stitle;
   font-size: 24px;
-
 }
 .skilllist {
   grid-area: slist;
