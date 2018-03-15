@@ -227,7 +227,7 @@ ul {
     padding: 0;
     list-style: none;
     grid-template-columns: auto auto auto;
-    grid-template-rows: 75px 600px auto auto auto;
+    grid-template-rows: 75px 600px auto auto 75px;
     grid-template-areas:
       "header header header"
       "banner banner banner"
