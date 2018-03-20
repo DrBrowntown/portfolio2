@@ -64,6 +64,7 @@ ul {
 .skills {
   grid-area: skills;
   background-color: white;
+  align-content: space-evenly;
   grid-template-areas:
     "title" 
     "frontskills"
@@ -133,10 +134,12 @@ ul {
   min-height: 50px;
   max-height: 50px;
   margin-top: 20px;
+  margin-bottom: 15px;
 }
 .skilltitle {
   grid-area: stitle;
   font-size: 24px;
+
 }
 .skilllist {
   grid-area: slist;
