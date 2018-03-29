@@ -94,7 +94,7 @@ ul {
 }
 .project1, .project2, .project3, .project4, .frontskills, .backskills, .otherskills {
   border: solid;
-  max-width: auto;
+  max-width: 290px;
   min-width: 290px;
   min-height: 250px;
 }
@@ -103,11 +103,12 @@ ul {
   justify-items: center;
   margin-bottom: 10px;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto;
   grid-template-areas: 
     "picon"
     "ptitle"
-    "pmenu"  
+    "pmenu"
+    "pdetail";  
 }
 .projecticon {
   grid-area: picon;
@@ -122,6 +123,10 @@ ul {
 }
 .projectmenu {
   grid-area: pmenu;
+}
+.pdetail {
+  grid-area: pdetail;
+  padding: 5px;
 }
 .frontskills, .backskills, .otherskill {
   display: grid;
@@ -276,7 +281,7 @@ ul {
   }
   .work, .skills {
     display: grid;
-    grid-row-gap: 0;
+    grid-row-gap: 100px;
     grid-template-columns: repeat(5, auto);
         
   }
@@ -307,6 +312,7 @@ ul {
   .project1, .project2, .project3, .project4, .frontskills, .backskills, .otherskills {
     margin-bottom: 15px;
     min-width: 330px;
+    max-width: 330px;
   }
    
   a {
