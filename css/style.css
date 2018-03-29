@@ -1,5 +1,7 @@
 .grid > * {
   padding: 5px;
+  
+  margin: 0;
 }
 body {
   margin: 0;
@@ -8,8 +10,8 @@ body {
 }
 a {
   color: white;
-  font-size: 25px;
-  margin: 20px;
+  font-size: 20px;
+  margin: 15px;
 }
 
 img {
@@ -25,7 +27,9 @@ ul {
 /*Main grids*/
 .header {
   grid-area: header;
-  background-color: #8e1923;  
+  background-color: #8e1923; 
+
+
 }
 .banner {
   display: grid;
@@ -90,7 +94,7 @@ ul {
 .project1, .project2, .project3, .frontskills, .backskills, .otherskills {
   border: solid;
   max-width: 300px;
-  min-width: 340px;
+  min-width: 300px;
   min-height: 250px;
 }
 .project1, .project2, .project3 {
@@ -291,12 +295,16 @@ ul {
   } 
   .header {
     padding-top: 25px;
+    
   }
   .project1, .project2, .project3 {
     margin-bottom: 15px;
   }
   .frontskills, .backskills, .otherskills  {
     margin-bottom: 15px;
+  }
+  a {
+    font-size: 22px;
   }
   
 }
