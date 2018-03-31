@@ -13,7 +13,9 @@ a {
   font-size: 20px;
   margin: 15px;
 }
-
+summary {
+  font-weight: bold;
+}
 img {
     
     margin: 0 auto;
@@ -24,17 +26,23 @@ ul {
   list-style-type: none;
 }
 
+.smalllink {
+  font-size: 18px;
+  color: grey;
+}
+
 /*Main grids*/
 .header {
   grid-area: header;
   background-color: #8e1923; 
-
-
+  position: fixed;
+  width: 100%;
+  z-index: 9999; 
 }
 .banner {
   display: grid;
   grid-area: banner;
-  background-color: #383a3d;
+  background: #383a3d;
   color: white;
   min-height: 640px;
   padding: 0;
@@ -58,7 +66,7 @@ ul {
 }
 .work {
   grid-area: work;
-  background-color: lightgrey;
+  background: lightgrey;
   grid-template-areas:
     "title" 
     "project1"
@@ -90,7 +98,8 @@ ul {
 /*Sub grids*/
 .title {
   grid-area: title;
-  text-decoration: underline;  
+  text-decoration: underline;
+  padding-top: 5px;  
 }
 .project1, .project2, .project3, .project4, .frontskills, .backskills, .otherskills {
   border: solid;
@@ -127,6 +136,10 @@ ul {
 .pdetail {
   grid-area: pdetail;
   padding: 5px;
+  background: #383a3d;
+  color: white;
+  min-width: 280px;
+  max-height: 100px;
 }
 .frontskills, .backskills, .otherskill {
   display: grid;
@@ -268,7 +281,7 @@ ul {
     padding: 0;
     list-style: none;
     grid-template-columns: auto auto auto;
-    grid-template-rows: 75px 600px auto auto auto 75px;
+    grid-template-rows: auto 600px auto auto auto 75px;
     grid-template-areas:
       "header header header"
       "banner banner banner"
@@ -281,7 +294,7 @@ ul {
   }
   .work, .skills {
     display: grid;
-    grid-row-gap: 100px;
+    grid-row-gap: 60px;
     grid-template-columns: repeat(5, auto);
         
   }
@@ -307,13 +320,21 @@ ul {
   } 
   .header {
     padding-top: 25px;
-
+    padding-bottom: 15px;
+     
+  }
+  .banner {
+    margin-top: 25px;
   }
   .project1, .project2, .project3, .project4, .frontskills, .backskills, .otherskills {
     margin-bottom: 15px;
     min-width: 330px;
     max-width: 330px;
+    max-height: 275px;
   }
+  .pdetail {
+    min-width: 320px;
+  }  
    
   a {
     font-size: 22px;
