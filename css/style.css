@@ -24,7 +24,9 @@ img {
 ul {
   list-style-type: none;
 }
-
+.headerlink {
+  font-size: 15px;
+}
 .smalllink {
   font-size: 18px;
   color: white;
@@ -37,6 +39,7 @@ ul {
   position: fixed;
   width: 100%;
   z-index: 9999; 
+  justify-items: center;
 }
 .banner {
   display: grid;
@@ -275,6 +278,11 @@ ul {
   }
 }
 
+@media screen and (min-width: 460px) {
+  .headerlink {
+  font-size: 25px;
+  }
+}
 /*Card shadow*/
 .shadow {
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
@@ -332,6 +340,9 @@ ul {
   .header {
     padding: 15px;
     padding-bottom: 15px;     
+  }
+  .headerlink {
+  font-size: 25px;
   }
   .banner {
     margin-top: 25px;
