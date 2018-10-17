@@ -1,11 +1,11 @@
 .grid > * {
-  padding: 5px;  
+  padding: 5px;
   margin: 0;
 }
 body {
   margin: 0;
   text-align: center;
-  font-family: 'Quattrocento', serif;
+  font-family: "Quattrocento", serif;
 }
 a {
   color: white;
@@ -17,9 +17,8 @@ summary {
   font-weight: bold;
 }
 img {
-    
-    margin: 0 auto;
-    height: 100%;    
+  margin: 0 auto;
+  height: 100%;
 }
 ul {
   list-style-type: none;
@@ -35,10 +34,10 @@ ul {
 /*Main grids*/
 .header {
   grid-area: header;
-  background-color: #8e1923; 
+  background-color: #8e1923;
   position: fixed;
   width: 100%;
-  z-index: 9999; 
+  z-index: 9999;
   justify-items: center;
 }
 .banner {
@@ -55,33 +54,39 @@ ul {
   grid-template-areas:
     "blogo"
     "bname"
-    "bsummary"
+    "bsummary";
 }
 
-.work, .skills {
-  justify-items: center;  
+.work,
+.skills {
+  justify-items: center;
   display: grid;
   grid-column-gap: 50px;
-  grid-row-gap: 20px; 
+  grid-row-gap: 20px;
   grid-template-columns: 1fr;
-  grid-template-rows: 75px auto auto auto auto;  
+  grid-template-rows: 75px auto auto auto auto;
 }
 .work {
   grid-area: work;
   background: lightgrey;
   grid-template-areas:
-    "title" 
+    "title"
     "project1"
     "project2"
     "project3"
-    "project4";
+    "project4"
+    "project5"
+    "project6"
+    "project7"
+    "project8"
+    "project9";
 }
 .skills {
   grid-area: skills;
   background-color: white;
   align-content: space-evenly;
   grid-template-areas:
-    "title" 
+    "title"
     "frontskills"
     "backskills"
     "otherskills";
@@ -89,40 +94,57 @@ ul {
 .footer {
   grid-area: footer;
   background-color: #8e1923;
-  
 }
-.contacticon{
+.contacticon {
   max-height: 50px;
   padding-top: 5px;
-
 }
 
 /*Sub grids*/
 .title {
   grid-area: title;
   text-decoration: underline;
-  font-size: 39px; 
+  font-size: 39px;
   margin-top: 15px;
   font-weight: bold;
 }
-.project1, .project2, .project3, .project4, .frontskills, .backskills, .otherskills {
+.project1,
+.project2,
+.project3,
+.project4,
+.project5,
+.project6,
+.project7,
+.project8,
+.project9,
+.frontskills,
+.backskills,
+.otherskills {
   border: solid;
   background: white;
   max-width: 290px;
   min-width: 290px;
   min-height: 250px;
 }
-.project1, .project2, .project3, .project4 {
+.project1,
+.project2,
+.project3,
+.project4,
+.project5,
+.project6,
+.project7,
+.project8,
+.project9 {
   display: grid;
   justify-items: center;
   margin-bottom: 10px;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto;
-  grid-template-areas: 
+  grid-template-areas:
     "picon"
     "ptitle"
     "pmenu"
-    "pdetail";  
+    "pdetail";
 }
 .projecticon {
   grid-area: picon;
@@ -138,7 +160,6 @@ ul {
 .projectmenu {
   grid-area: pmenu;
   color: #8e1923;
-
 }
 .pdetail {
   grid-area: pdetail;
@@ -148,15 +169,17 @@ ul {
   min-width: 280px;
   max-height: 100px;
 }
-.frontskills, .backskills, .otherskill {
+.frontskills,
+.backskills,
+.otherskill {
   display: grid;
-  justify-items: center;   
+  justify-items: center;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas:
     "sicon"
     "stitle"
-    "slist"
+    "slist";
 }
 
 .skillicon {
@@ -169,7 +192,6 @@ ul {
 .skilltitle {
   grid-area: stitle;
   font-size: 24px;
-
 }
 .skilllist {
   grid-area: slist;
@@ -192,10 +214,9 @@ ul {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 100px;
-  grid-template-areas:
-  "rounded"
+  grid-template-areas: "rounded";
 }
-.rounded{
+.rounded {
   grid-area: rounded;
   width: 100%;
   height: auto;
@@ -211,11 +232,10 @@ ul {
   grid-area: bsummary;
   font-size: 24px;
   max-width: 300px;
-
 }
 /*Work grid elements*/
 .project1 {
-  grid-area: project1; 
+  grid-area: project1;
 }
 .project2 {
   grid-area: project2;
@@ -225,6 +245,21 @@ ul {
 }
 .project4 {
   grid-area: project4;
+}
+.project5 {
+  grid-area: project5;
+}
+.project6 {
+  grid-area: project6;
+}
+.project7 {
+  grid-area: project7;
+}
+.project8 {
+  grid-area: project8;
+}
+.project9 {
+  grid-area: project9;
 }
 /*Skills grid elements*/
 .frontskills {
@@ -252,25 +287,31 @@ ul {
 /*Styles popup window*/
 
 /*Icon fade in*/
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
-  .fade-in {
-      opacity:0;  /* make things invisible upon start */
-      animation:fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-      animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-      animation-duration:1s;
-      animation-delay: 0.5s
-  }
-  .fade-in2 {
-      animation-delay: 1s
-  }
-  .fade-in3 {    
-      animation-delay: 1.5s
-  }
-  .fade-in4 {    
-      animation-delay: 2s
-  }
-
+.fade-in {
+  opacity: 0; /* make things invisible upon start */
+  animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+.fade-in2 {
+  animation-delay: 1s;
+}
+.fade-in3 {
+  animation-delay: 1.5s;
+}
+.fade-in4 {
+  animation-delay: 2s;
+}
 
 @media screen and (min-width: 410px) {
   .banner {
@@ -280,51 +321,53 @@ ul {
 
 @media screen and (min-width: 460px) {
   .headerlink {
-  font-size: 25px;
+    font-size: 25px;
   }
 }
 /*Card shadow*/
 .shadow {
-  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 /*Styles for grid on larger screen*/
 
 @media screen and (min-width: 1235px) {
-  .grid {  
+  .grid {
     display: grid;
     margin: 0;
     padding: 0;
     list-style: none;
     grid-template-columns: auto auto auto;
-    grid-template-rows: auto 600px auto auto auto 75px;
+    grid-template-rows: auto 600px auto auto auto auto 75px;
     grid-template-areas:
       "header header header"
       "banner banner banner"
       "work work work"
       "work work work"
+      "work work work"
       "skills skills skills"
       "footer footer footer";
     /*grid-gap: 1rem;*/
-    /*min-height: 100vh;*/  
+    /*min-height: 100vh;*/
   }
-  .work, .skills {
+  .work,
+  .skills {
     display: grid;
     grid-row-gap: 60px;
     grid-template-columns: repeat(5, auto);
-        
   }
   .work {
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
-        "title title title title title" 
-        ". project1 project2 project3 ."
-        ". project4 . . ."; 
+      "title title title title title"
+      ". project1 project2 project3 ."
+      ". project4 project5 project6 ."
+      ". project7 project8 project9 .";
   }
   .skills {
     grid-template-rows: auto auto;
     grid-template-areas:
-      "title title title title title" 
+      "title title title title title"
       ". frontskills backskills otherskills .";
   }
   .bannersummary {
@@ -335,14 +378,13 @@ ul {
   .bannerlogo {
     grid-template-rows: 200px 75px 100px;
     margin-bottom: -150px;
-
-  } 
+  }
   .header {
     padding: 15px;
-    padding-bottom: 15px;     
+    padding-bottom: 15px;
   }
   .headerlink {
-  font-size: 25px;
+    font-size: 25px;
   }
   .banner {
     margin-top: 25px;
@@ -351,7 +393,18 @@ ul {
     padding: 0;
     margin-bottom: -40px;
   }
-  .project1, .project2, .project3, .project4, .frontskills, .backskills, .otherskills {
+  .project1,
+  .project2,
+  .project3,
+  .project4,
+  .project5,
+  .project6,
+  .project7,
+  .project8,
+  .project9,
+  .frontskills,
+  .backskills,
+  .otherskills {
     margin-bottom: 50px;
     min-width: 330px;
     max-width: 330px;
@@ -360,13 +413,12 @@ ul {
   }
   .pdetail {
     min-width: 320px;
-  }  
+  }
   .bannername {
     font-size: 50px;
     margin-top: 15px;
-  }   
+  }
   a {
     font-size: 22px;
   }
-  
 }
