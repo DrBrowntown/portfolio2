@@ -307,22 +307,22 @@ ul {
   animation-delay: 1s;
 }
 .fade-in3 {
-  animation-delay: 1.5s;
+  animation-delay: 1.25s;
 }
 .fade-in4 {
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 .fade-in5 {
-  animation-delay: 2.5s;
+  animation-delay: 1.75s;
 }
 .fade-in6 {
-  animation-delay: 3s;
+  animation-delay: 2s;
 }
 .fade-in7 {
-  animation-delay: 3.5s;
+  animation-delay: 2.25s;
 }
 .fade-in8 {
-  animation-delay: 4s;
+  animation-delay: 2.5s;
 }
 
 @media screen and (min-width: 410px) {
