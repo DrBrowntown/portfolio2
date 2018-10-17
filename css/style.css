@@ -312,6 +312,18 @@ ul {
 .fade-in4 {
   animation-delay: 2s;
 }
+.fade-in5 {
+  animation-delay: 2.5s;
+}
+.fade-in6 {
+  animation-delay: 3s;
+}
+.fade-in7 {
+  animation-delay: 3.5s;
+}
+.fade-in8 {
+  animation-delay: 4s;
+}
 
 @media screen and (min-width: 410px) {
   .banner {
