@@ -11,6 +11,109 @@
   <meta name="google-site-verification" content="-DBId7Na5QySjJbhj8zBxC2TchEHLBH55po0HESqpE8" />
   <title>Calvin Brownlee - Portfolio | Full-Stack Developer</title>
   <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
+  <style>
+    .grid>* {
+      padding: 5px;
+      margin: 0;
+    }
+
+    body {
+      margin: 0;
+      text-align: center;
+      font-family: "Quattrocento", serif;
+    }
+
+    a {
+      color: white;
+      font-size: 20px;
+      margin: 15px;
+      font-weight: bold;
+    }
+
+    summary {
+      font-weight: bold;
+    }
+
+    img {
+      margin: 0 auto;
+      height: 100%;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    .headerlink {
+      font-size: 15px;
+    }
+
+    .smalllink {
+      font-size: 18px;
+      color: white;
+    }
+
+    .header {
+      background-color: #8e1923;
+      position: fixed;
+      width: 100%;
+      justify-items: center;
+    }
+
+    .rounded {
+      grid-area: rounded;
+      width: 100%;
+      height: auto;
+    }
+
+    .bannername {
+      grid-area: bname;
+      font-size: 40px;
+      margin-bottom: 15px;
+      margin-top: auto;
+      letter-spacing: 2px;
+    }
+
+    .bannersummary {
+      grid-area: bsummary;
+      font-size: 24px;
+      max-width: 300px;
+    }
+
+    .bannerlogo {
+      margin-top: 15px;
+      grid-area: blogo;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      justify-items: center;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px;
+      grid-template-areas: "rounded";
+    }
+
+    .banner {
+      display: grid;
+      grid-area: banner;
+      background: #383a3d;
+      color: white;
+      min-height: 640px;
+      padding: 0;
+      justify-items: center;
+      align-content: space-evenly;
+      grid-template-columns: 1fr;
+      grid-template-rows: 200px 110px 200px;
+      grid-template-areas:
+        "blogo"
+        "bname"
+        "bsummary";
+    }
+  </style>
   <link rel="stylesheet" type="text/css" href="css/style.min.css">
   <link rel="stylesheet" type="text/css" href="css/animate.min.css">
   <link rel="stylesheet" type="text/css" href="css/desktop.min.css" media="(min-width: 1235px)">
