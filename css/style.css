@@ -31,6 +31,201 @@ ul {
   color: white;
 }
 
+/*Work grid elements*/
+.project1 {
+  grid-area: project1;
+}
+.project2 {
+  grid-area: project2;
+}
+.project3 {
+  grid-area: project3;
+}
+.project4 {
+  grid-area: project4;
+}
+.project5 {
+  grid-area: project5;
+}
+.project6 {
+  grid-area: project6;
+}
+.project7 {
+  grid-area: project7;
+}
+.project8 {
+  grid-area: project8;
+}
+.project9 {
+  grid-area: project9;
+}
+
+/*Skills grid elements*/
+.frontskills {
+  grid-area: frontskills;
+}
+.backskills {
+  grid-area: backskills;
+}
+.otherskills {
+  grid-area: otherskills;
+}
+
+/*Sub grids*/
+.title {
+  grid-area: title;
+  text-decoration: underline;
+  font-size: 39px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+.project1,
+.project2,
+.project3,
+.project4,
+.project5,
+.project6,
+.project7,
+.project8,
+.project9,
+.frontskills,
+.backskills,
+.otherskills {
+  border: solid;
+  background: white;
+  max-width: 290px;
+  min-width: 290px;
+  min-height: 250px;
+}
+
+.projecticon {
+  grid-area: picon;
+  min-height: 100px;
+  max-height: 100px;
+  margin: 15px;
+}
+.projecttitle {
+  grid-area: ptitle;
+  font-size: 24px;
+  margin-top: 30px;
+}
+.projectmenu {
+  grid-area: pmenu;
+  color: #8e1923;
+}
+.pdetail {
+  grid-area: pdetail;
+  padding: 5px;
+  background: #383a3d;
+  color: white;
+  min-width: 280px;
+  max-height: 100px;
+}
+
+.skillicon {
+  grid-area: sicon;
+  min-height: 50px;
+  max-height: 50px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.skilltitle {
+  grid-area: stitle;
+  font-size: 24px;
+}
+.skilllist {
+  grid-area: slist;
+  margin-right: 40px;
+}
+
+.project1,
+.project2,
+.project3,
+.project4,
+.project5,
+.project6,
+.project7,
+.project8,
+.project9 {
+  display: grid;
+  justify-items: center;
+  margin-bottom: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "picon"
+    "ptitle"
+    "pmenu"
+    "pdetail";
+}
+
+.frontskills,
+.backskills,
+.otherskill {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "sicon"
+    "stitle"
+    "slist";
+}
+
+/*Banner grid elements*/
+
+.rounded {
+  grid-area: rounded;
+  width: 100%;
+  height: auto;
+}
+.bannername {
+  grid-area: bname;
+  font-size: 40px;
+  margin-bottom: 15px;
+  margin-top: auto;
+  letter-spacing: 2px;
+}
+.bannersummary {
+  grid-area: bsummary;
+  font-size: 24px;
+  max-width: 300px;
+}
+
+.bannerlogo {
+  margin-top: 15px;
+  grid-area: blogo;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px;
+  grid-template-areas: "rounded";
+}
+
+@media screen and (min-width: 410px) {
+  .banner {
+    min-height: 700px;
+  }
+}
+
+@media screen and (min-width: 460px) {
+  .headerlink {
+    font-size: 25px;
+  }
+}
+/*Card shadow*/
+.shadow {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
 /*Main grids*/
 .header {
   grid-area: header;
@@ -98,193 +293,4 @@ ul {
 .contacticon {
   max-height: 50px;
   padding-top: 5px;
-}
-
-/*Sub grids*/
-.title {
-  grid-area: title;
-  text-decoration: underline;
-  font-size: 39px;
-  margin-top: 15px;
-  font-weight: bold;
-}
-.project1,
-.project2,
-.project3,
-.project4,
-.project5,
-.project6,
-.project7,
-.project8,
-.project9,
-.frontskills,
-.backskills,
-.otherskills {
-  border: solid;
-  background: white;
-  max-width: 290px;
-  min-width: 290px;
-  min-height: 250px;
-}
-.project1,
-.project2,
-.project3,
-.project4,
-.project5,
-.project6,
-.project7,
-.project8,
-.project9 {
-  display: grid;
-  justify-items: center;
-  margin-bottom: 10px;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas:
-    "picon"
-    "ptitle"
-    "pmenu"
-    "pdetail";
-}
-.projecticon {
-  grid-area: picon;
-  min-height: 100px;
-  max-height: 100px;
-  margin: 15px;
-}
-.projecttitle {
-  grid-area: ptitle;
-  font-size: 24px;
-  margin-top: 30px;
-}
-.projectmenu {
-  grid-area: pmenu;
-  color: #8e1923;
-}
-.pdetail {
-  grid-area: pdetail;
-  padding: 5px;
-  background: #383a3d;
-  color: white;
-  min-width: 280px;
-  max-height: 100px;
-}
-.frontskills,
-.backskills,
-.otherskill {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "sicon"
-    "stitle"
-    "slist";
-}
-
-.skillicon {
-  grid-area: sicon;
-  min-height: 50px;
-  max-height: 50px;
-  margin-top: 20px;
-  margin-bottom: 15px;
-}
-.skilltitle {
-  grid-area: stitle;
-  font-size: 24px;
-}
-.skilllist {
-  grid-area: slist;
-  margin-right: 40px;
-}
-
-/*Banner grid elements*/
-.bannerlogo {
-  margin-top: 15px;
-  grid-area: blogo;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  justify-items: center;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100px;
-  grid-template-areas: "rounded";
-}
-.rounded {
-  grid-area: rounded;
-  width: 100%;
-  height: auto;
-}
-.bannername {
-  grid-area: bname;
-  font-size: 40px;
-  margin-bottom: 15px;
-  margin-top: auto;
-  letter-spacing: 2px;
-}
-.bannersummary {
-  grid-area: bsummary;
-  font-size: 24px;
-  max-width: 300px;
-}
-
-/*Work grid elements*/
-.project1 {
-  grid-area: project1;
-}
-.project2 {
-  grid-area: project2;
-}
-.project3 {
-  grid-area: project3;
-}
-.project4 {
-  grid-area: project4;
-}
-.project5 {
-  grid-area: project5;
-}
-.project6 {
-  grid-area: project6;
-}
-.project7 {
-  grid-area: project7;
-}
-.project8 {
-  grid-area: project8;
-}
-.project9 {
-  grid-area: project9;
-}
-/*Skills grid elements*/
-.frontskills {
-  grid-area: frontskills;
-}
-.backskills {
-  grid-area: backskills;
-}
-.otherskills {
-  grid-area: otherskills;
-}
-
-@media screen and (min-width: 410px) {
-  .banner {
-    min-height: 700px;
-  }
-}
-
-@media screen and (min-width: 460px) {
-  .headerlink {
-    font-size: 25px;
-  }
-}
-/*Card shadow*/
-.shadow {
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
