@@ -1,0 +1,90 @@
+{
+  "name": "Calvin Brownlee's Portfolio",
+  "short_name": "Portfolio",
+  "theme_color": "#8e1923",
+  "display": "browser",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "images/backend.png",
+      "sizes": "512X512",
+      "type": "images/png"
+    },
+    {
+      "src": "images/beer.png",
+      "sizes": "437X600",
+      "type": "images/png"
+    },
+    {
+      "src": "images/camera.png",
+      "sizes": "512x512",
+      "type": "images/png"
+    },
+    {
+      "src": "images/png",
+      "sizes": "512x512",
+      "type": "images/png"
+    },
+    {
+      "src": "images/cells.png",
+      "sizes": "512x512",
+      "type": "images/png"
+    },
+    {
+      "src": "images/email.png",
+      "sizes": "512x512",
+      "type": "images/png"
+    },
+    {
+      "src": "images/face.jpg",
+      "sizes": "340x340",
+      "type": "images/jpg"
+    },
+    {
+      "src": "images/frontend.png",
+      "sizes": "512x512",
+      "type": "images/png"
+    },
+    {
+      "src": "images/github.png",
+      "sizes": "512x512",
+      "type": "images/png"
+    },
+    {
+      "src": "images/linkedin.png",
+      "sizes": "512x512",
+      "type": "images/png"
+    },
+    {
+      "src": "images/map.png",
+      "sizes": "256x256",
+      "type": "images/png"
+    },
+    {
+      "src": "images/museum.png",
+      "sizes": "1600x1600",
+      "type": "images/png"
+    },
+    {
+      "src": "images/otherskills.png",
+      "sizes": "512x512",
+      "type": "images/png"
+    },
+    {
+      "src": "images/store.png",
+      "sizes": "512x512",
+      "type": "images/png"
+    },
+    {
+      "src": "images/tinytrans.gif",
+      "sizes": "1x1",
+      "type": "images/gif"
+    },
+    {
+      "src": "images/tour.png",
+      "sizes": "1500x1600",
+      "type": "images/png"
+    }
+  ]
+}
