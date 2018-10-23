@@ -2,7 +2,8 @@
   "name": "Calvin Brownlee's Portfolio",
   "short_name": "Portfolio",
   "theme_color": "#8e1923",
-  "display": "browser",
+  "background_color": "#8e1923",
+  "display": "browser | fullscreen | standalone | minimal-ui",
   "scope": "/",
   "start_url": "/",
   "icons": [
