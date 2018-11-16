@@ -1,313 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#8e1923" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A collection of Calvin Brownlee's web and software development work. Come take a look!"
+    />
+    <meta
+      name="keywords"
+      content="Calvin,Brownlee,Portfolio,Full-Stack,Developer,tech"
+    />
+    <meta name="author" content="Calvin Brownlee" />
+    <meta
+      name="google-site-verification"
+      content="-DBId7Na5QySjJbhj8zBxC2TchEHLBH55po0HESqpE8"
+    />
+    <title>Calvin Brownlee - Portfolio | Full-Stack Developer</title>
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
+    <link rel="manifest" href="/manifest.json" />
+    <style>
+      .grid > * {
+        padding: 5px;
+        text-align: center;
+        margin: 0;
+      }
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="theme-color" content="#8e1923" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A collection of Calvin Brownlee's web and software development work. Come take a look!" />
-  <meta name="keywords" content="Calvin,Brownlee,Portfolio,Full-Stack,Developer,tech" />
-  <meta name="author" content="Calvin Brownlee" />
-  <meta name="google-site-verification" content="-DBId7Na5QySjJbhj8zBxC2TchEHLBH55po0HESqpE8" />
-  <title>Calvin Brownlee - Portfolio | Full-Stack Developer</title>
-  <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
-  <link rel="manifest" href="/manifest.json">
-  <style>
-    .grid>* {
-      padding: 5px;
-      text-align: center;
-      margin: 0;
-    }
+      body {
+        margin: 0;
 
-    body {
-      margin: 0;
+        font-family: "Quattrocento", serif;
+      }
 
-      font-family: "Quattrocento", serif;
-    }
+      a {
+        color: white;
+        font-size: 20px;
+        margin: 15px;
+        font-weight: bold;
+      }
 
-    a {
-      color: white;
-      font-size: 20px;
-      margin: 15px;
-      font-weight: bold;
-    }
+      summary {
+        font-weight: bold;
+      }
 
-    summary {
-      font-weight: bold;
-    }
+      img {
+        margin: 0 auto;
+        height: 100%;
+      }
 
-    img {
-      margin: 0 auto;
-      height: 100%;
-    }
+      ul {
+        list-style-type: none;
+      }
 
-    ul {
-      list-style-type: none;
-    }
+      .headerlink {
+        font-size: 15px;
+      }
 
-    .headerlink {
-      font-size: 15px;
-    }
+      .smalllink {
+        font-size: 18px;
+        color: white;
+      }
 
-    .smalllink {
-      font-size: 18px;
-      color: white;
-    }
+      .header {
+        background-color: #8e1923;
+        position: fixed;
+        width: 100%;
+        z-index: 9999;
+        justify-items: center;
+      }
 
-    .header {
-      background-color: #8e1923;
-      position: fixed;
-      width: 100%;
-      z-index: 9999;
-      justify-items: center;
-    }
+      .rounded {
+        grid-area: rounded;
+        width: 100%;
+        height: auto;
+      }
 
-    .rounded {
-      grid-area: rounded;
-      width: 100%;
-      height: auto;
-    }
+      .bannername {
+        grid-area: bname;
+        font-size: 40px;
+        margin-bottom: 15px;
+        margin-top: auto;
+        letter-spacing: 2px;
+      }
 
-    .bannername {
-      grid-area: bname;
-      font-size: 40px;
-      margin-bottom: 15px;
-      margin-top: auto;
-      letter-spacing: 2px;
-    }
+      .bannersummary {
+        grid-area: bsummary;
+        font-size: 24px;
+        max-width: 300px;
+        justify-items: center;
+      }
 
-    .bannersummary {
-      grid-area: bsummary;
-      font-size: 24px;
-      max-width: 300px;
-      justify-items: center;
-    }
+      .bannerlogo {
+        margin-top: 15px;
+        grid-area: blogo;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+        justify-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px;
+        grid-template-areas: "rounded";
+      }
 
-    .bannerlogo {
-      margin-top: 15px;
-      grid-area: blogo;
-      width: 200px;
-      height: 200px;
-      overflow: hidden;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
-      border-radius: 50%;
-      justify-items: center;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 100px;
-      grid-template-areas: "rounded";
-    }
+      .banner {
+        display: grid;
+        grid-area: banner;
+        background: #383a3d;
+        color: white;
+        min-height: 640px;
+        padding: 0;
+        justify-items: center;
+        align-content: space-evenly;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 110px 200px;
+        grid-template-areas:
+          "blogo"
+          "bname"
+          "bsummary";
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/style.min.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/animate.min.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/desktop.min.css"
+      media="(min-width: 1235px)"
+    />
+  </head>
 
-    .banner {
-      display: grid;
-      grid-area: banner;
-      background: #383a3d;
-      color: white;
-      min-height: 640px;
-      padding: 0;
-      justify-items: center;
-      align-content: space-evenly;
-      grid-template-columns: 1fr;
-      grid-template-rows: 200px 110px 200px;
-      grid-template-areas:
-        "blogo"
-        "bname"
-        "bsummary";
-    }
-  </style>
-  <link rel="stylesheet" type="text/css" href="css/style.min.css">
-  <link rel="stylesheet" type="text/css" href="css/animate.min.css">
-  <link rel="stylesheet" type="text/css" href="css/desktop.min.css" media="(min-width: 1235px)">
-  <link href="https://fonts.googleapis.com/css?family=Alegreya%7CAlegreya+Sans%7CMerriweather%7CMerriweather+Sans%7CNunito%7CNunito+Sans%7CQuattrocento%7CQuattrocento+Sans%7CRoboto%7CRoboto+Mono%7CRoboto+Slab"
-    rel="stylesheet">
+  <body>
+    <div class="grid">
+      <!-- Header and Navigation -->
+      <div class="header">
+        <a class="headerlink" href="#workid">Work</a>
+        <a class="headerlink" href="#skillsid">Skills</a>
+        <a class="headerlink" href="#footerid">Contact</a>
+        <a class="headerlink" href="images/resume.pdf">Resume</a>
+      </div>
+      <!-- Banner -->
+      <div class="banner">
+        <div class="bannerlogo">
+          <img
+            data-src="images/face.jpg"
+            src="images/tinytrans.gif"
+            class="rounded b-lazy"
+            alt="face"
+          />
+        </div>
+        <h1 class="bannername">Calvin Brownlee</h1>
+        <header class="bannersummary">
+          I am a Full-Stack Developer with 6 years of experience as a Production
+          Manager and Quality Engineer in the IoT, 3D Printing, and
+          manufacturing industries.
+        </header>
+      </div>
+      <!-- Section detailing completed works -->
+      <div class="work" id="workid">
+        <div class="title">Work</div>
+        <div class="project1 fade-in shadow">
+          <img
+            class="projecticon b-lazy"
+            data-src="images/museum.png"
+            alt="museum icon"
+          />
+          <div class="projecttitle">Museum Catalog</div>
+          <a class="projectmenu" href="http://www.catalog.calvinbrownlee.com/"
+            >catalog.calvinbrownlee.com</a
+          >
+          <details class="pdetail">
+            <summary>More info</summary> <b>Tech Used:</b> Python, Flask,
+            PostgreSQL, OAuth2, AWS
+            <hr />
+            <a
+              class="smalllink"
+              href="https://github.com/DrBrowntown/Museum-catalog-master-2.0"
+              >Github Link</a
+            >
+          </details>
+        </div>
+        <div class="project2 fade-in fade-in2 shadow">
+          <img
+            class="projecticon b-lazy"
+            data-src="images/map.png"
+            alt="map icon"
+          />
+          <div class="projecttitle">Local Map</div>
+          <a class="projectmenu" href="http://www.map.calvinbrownlee.com/"
+            >map.calvinbrownlee.com</a
+          >
+          <details class="pdetail">
+            <summary>More info</summary> <b>Tech Used:</b> Javascript, Google
+            Map API, Knockout.js, AWS
+            <hr />
+            <a
+              class="smalllink"
+              href="https://github.com/DrBrowntown/local-map-final"
+              >Github Link</a
+            >
+          </details>
+        </div>
+        <div class="project3 fade-in fade-in3 shadow">
+          <img
+            class="projecticon b-lazy"
+            data-src="images/tour.png"
+            alt="tour icon"
+          />
+          <div class="projecttitle">Tourism Site</div>
+          <a class="projectmenu" href="http://www.jones.calvinbrownlee.com/"
+            >jones.calvinbrownlee.com</a
+          >
+          <details class="pdetail">
+            <summary>More info</summary> <b>Tech Used:</b> HTML, CSS, AWS
+            <hr />
+            <a
+              class="smalllink"
+              href="https://github.com/DrBrowntown/tourism-site"
+              >Github Link</a
+            >
+          </details>
+        </div>
+        <div class="project4 fade-in fade-in4 shadow">
+          <img
+            class="projecticon b-lazy"
+            data-src="images/beer.png"
+            alt="beer icon"
+          />
+          <div class="projecttitle">Wordpress Example</div>
+          <a class="projectmenu" href="http://www.beer.calvinbrownlee.com/"
+            >beer.calvinbrownlee.com</a
+          >
+          <details class="pdetail">
+            <summary>More info</summary> <b>Tech Used:</b> Wordpress, Elemator,
+            AWS(Bitnami)
+          </details>
+        </div>
+        <div class="project5 fade-in fade-in5 shadow">
+          <img
+            class="projecticon b-lazy"
+            data-src="images/cells.png"
+            alt="spreadsheet icon"
+          />
+          <div class="projecttitle">CSV Analyzer</div>
+          <a
+            class="projectmenu"
+            href="https://github.com/DrBrowntown/CSV-Analyzer"
+            >github.com/CSV-Analyzer</a
+          >
+          <details class="pdetail">
+            <summary>More info</summary> <b>Tech Used:</b> Python
+            <hr />
+            <a
+              class="smalllink"
+              href="https://github.com/DrBrowntown/CSV-Analyzer"
+              >Github Link</a
+            >
+          </details>
+        </div>
+        <div class="project6 fade-in fade-in6 shadow">
+          <img
+            class="projecticon b-lazy"
+            data-src="images/camera.png"
+            alt="camera icon"
+          />
+          <div class="projecttitle">Photobooth</div>
+          <a
+            class="projectmenu"
+            href="https://github.com/DrBrowntown/mouseless-project"
+            >photobooth</a
+          >
+          <details class="pdetail">
+            <summary>More info</summary> <b>Tech Used:</b> Javascript, Webcam,
+            Microphone
+            <hr />
+            <a
+              class="smalllink"
+              href="https://github.com/DrBrowntown/mouseless-project"
+              >Github Link</a
+            >
+          </details>
+        </div>
+        <div class="project7 fade-in fade-in7 shadow">
+          <img
+            class="projecticon b-lazy"
+            data-src="images/cart.png"
+            alt="cart icon"
+          />
+          <div class="projecttitle">Ecommerce Product Page</div>
+          <a
+            class="projectmenu"
+            href="https://drbrowntown.github.io/ecommerce-example/"
+            >ecommerce-example</a
+          >
+          <details class="pdetail">
+            <summary>More info</summary> <b>Tech Used:</b> HTML, CSS Grid,
+            Javascript
+            <hr />
+            <a
+              class="smalllink"
+              href="https://github.com/DrBrowntown/ecommerce-example"
+              >Github Link</a
+            >
+          </details>
+        </div>
+        <div class="project8 fade-in fade-in8 shadow">
+          <img
+            class="projecticon b-lazy"
+            data-src="images/store.png"
+            alt="store icon"
+          />
+          <div class="projecttitle">Now That's Delicious!</div>
+          <a class="projectmenu" href="http://www.delicious.calvinbrownlee.com/"
+            >delicious.calvinbrownlee</a
+          >
+          <details class="pdetail">
+            <summary>More info</summary> <b>Tech Used:</b> Node.js, Express,
+            MongoDB
+            <hr />
+            <a class="smalllink" href="https://github.com/DrBrowntown/delicious"
+              >Github Link</a
+            >
+          </details>
+        </div>
+      </div>
+      <!-- Section detailing relevant skills -->
+      <div class="skills" id="skillsid">
+        <div class="title">Skills</div>
+        <div class="frontskills fade-in fade-in3 shadow">
+          <img
+            class="skillicon b-lazy"
+            data-src="images/frontend.png"
+            alt=" frontend skill icon"
+          />
+          <div class="skilltitle">Front End Skills</div>
+          <ul class="skilllist">
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <li>React.js</li>
+            <li>jQuery</li>
+            <li>Bootstrap</li>
+            <li>Knockout.js</li>
+          </ul>
+        </div>
+        <div class="backskills fade-in fade-in2 shadow">
+          <img
+            class="skillicon b-lazy"
+            data-src="images/backend.png"
+            alt="backend skill icon"
+          />
+          <div class="skilltitle">Back End Skills</div>
+          <ul class="skilllist">
+            <li>Node.js</li>
+            <li>MongoDB</li>
+            <li>PostgreSQL/SQLAlchemy</li>
+            <li>Python</li>
+            <li>Flask</li>
+            <li>LAPP Server Admin</li>
+          </ul>
+        </div>
+        <div class="otherskills fade-in shadow">
+          <img
+            class="skillicon b-lazy"
+            data-src="images/otherskills.png"
+            alt="other skill icon"
+          />
+          <div class="skilltitle">Other Skills</div>
+          <ul class="skilllist">
+            <li>Git/Github</li>
+            <li>AWS</li>
+            <li>Wordpress</li>
+            <li>Webpack</li>
+            <li>Data Analysis</li>
+            <li>Agile Methodologies</li>
+            <li>Leadership</li>
+          </ul>
+        </div>
+      </div>
+      <footer class="footer" id="footerid">
+        <!-- Footer linking to contact info -->
+        <a href="https://github.com/DrBrowntown">
+          <img
+            data-src="images/github.png"
+            class="contacticon b-lazy"
+            alt="github icon"
+        /></a>
 
-</head>
+        <a href="https://www.linkedin.com/in/calvinbrownlee/">
+          <img
+            data-src="images/linkedin.png"
+            class="contacticon b-lazy"
+            alt="linkedIn icon"
+        /></a>
 
-<body>
-  <div class="grid">
-    <!-- Header and Navigation -->
-    <div class="header">
-      <a class="headerlink" href="#workid">Work</a>
-      <a class="headerlink" href="#skillsid">Skills</a>
-      <a class="headerlink" href="#footerid">Contact</a>
-      <a class="headerlink" href="images/resume.pdf">Resume</a>
+        <a href="mailto:calvinbrownlee@gmail.com">
+          <img
+            data-src="images/email.png"
+            class="contacticon b-lazy"
+            alt="email icon"
+        /></a>
+      </footer>
     </div>
-    <!-- Banner -->
-    <div class="banner">
-      <div class="bannerlogo">
-        <img data-src="images/face.jpg" src="images/tinytrans.gif" class="rounded b-lazy" alt="face">
-      </div>
-      <h1 class="bannername">Calvin Brownlee</h1>
-      <header class="bannersummary">
-        I am a Full-Stack Developer with 6 years of experience as a Production Manager and Quality Engineer in the IoT,
-        3D Printing, and manufacturing industries.
-      </header>
-    </div>
-    <!-- Section detailing completed works -->
-    <div class="work" id="workid">
-      <div class="title">
-        Work
-      </div>
-      <div class="project1 fade-in shadow">
-        <img class="projecticon b-lazy" data-src="images/museum.png" alt="museum icon">
-        <div class="projecttitle">Museum Catalog</div>
-        <a class="projectmenu" href="http://www.catalog.calvinbrownlee.com/">catalog.calvinbrownlee.com</a>
-        <details class="pdetail">
-          <summary>More info</summary>
-          <b>Tech Used:</b> Python, Flask, PostgreSQL, OAuth2, AWS
-          <hr>
-          <a class="smalllink" href="https://github.com/DrBrowntown/Museum-catalog-master-2.0">Github Link</a>
-        </details>
-      </div>
-      <div class="project2 fade-in fade-in2 shadow">
-        <img class="projecticon b-lazy" data-src="images/map.png" alt="map icon">
-        <div class="projecttitle">Local Map</div>
-        <a class="projectmenu" href="http://www.map.calvinbrownlee.com/">map.calvinbrownlee.com</a>
-        <details class="pdetail">
-          <summary>More info</summary>
-          <b>Tech Used:</b> Javascript, Google Map API, Knockout.js, AWS
-          <hr>
-          <a class="smalllink" href="https://github.com/DrBrowntown/local-map-final">Github Link</a>
-        </details>
-      </div>
-      <div class="project3 fade-in fade-in3 shadow">
-        <img class="projecticon b-lazy" data-src="images/tour.png" alt="tour icon">
-        <div class="projecttitle">Tourism Site</div>
-        <a class="projectmenu" href="http://www.jones.calvinbrownlee.com/">jones.calvinbrownlee.com</a>
-        <details class="pdetail">
-          <summary>More info</summary>
-          <b>Tech Used:</b> HTML, CSS, AWS
-          <hr>
-          <a class="smalllink" href="https://github.com/DrBrowntown/tourism-site">Github Link</a>
-        </details>
-      </div>
-      <div class="project4 fade-in fade-in4 shadow">
-        <img class="projecticon b-lazy" data-src="images/beer.png" alt="beer icon">
-        <div class="projecttitle">Wordpress Example</div>
-        <a class="projectmenu" href="http://www.beer.calvinbrownlee.com/">beer.calvinbrownlee.com</a>
-        <details class="pdetail">
-          <summary>More info</summary>
-          <b>Tech Used:</b> Wordpress, Elemator, AWS(Bitnami)
-        </details>
-      </div>
-      <div class="project5 fade-in fade-in5 shadow">
-        <img class="projecticon b-lazy" data-src="images/cells.png" alt="spreadsheet icon">
-        <div class="projecttitle">CSV Analyzer</div>
-        <a class="projectmenu" href="https://github.com/DrBrowntown/CSV-Analyzer">github.com/CSV-Analyzer</a>
-        <details class="pdetail">
-          <summary>More info</summary>
-          <b>Tech Used:</b> Python
-          <hr>
-          <a class="smalllink" href="https://github.com/DrBrowntown/CSV-Analyzer">Github Link</a>
-        </details>
-      </div>
-      <div class="project6 fade-in fade-in6 shadow">
-        <img class="projecticon b-lazy" data-src="images/camera.png" alt="camera icon">
-        <div class="projecttitle">Photobooth</div>
-        <a class="projectmenu" href="https://github.com/DrBrowntown/mouseless-project">photobooth</a>
-        <details class="pdetail">
-          <summary>More info</summary>
-          <b>Tech Used:</b> Javascript, Webcam, Microphone
-          <hr>
-          <a class="smalllink" href="https://github.com/DrBrowntown/mouseless-project">Github Link</a>
-        </details>
-      </div>
-      <div class="project7 fade-in fade-in7 shadow">
-        <img class="projecticon b-lazy" data-src="images/cart.png" alt="cart icon">
-        <div class="projecttitle">Ecommerce Product Page</div>
-        <a class="projectmenu" href="https://drbrowntown.github.io/ecommerce-example/">ecommerce-example</a>
-        <details class="pdetail">
-          <summary>More info</summary>
-          <b>Tech Used:</b> HTML, CSS Grid, Javascript
-          <hr>
-          <a class="smalllink" href="https://github.com/DrBrowntown/ecommerce-example">Github Link</a>
-        </details>
-      </div>
-      <div class="project8 fade-in fade-in8 shadow">
-        <img class="projecticon b-lazy" data-src="images/store.png" alt="store icon">
-        <div class="projecttitle">Now That's Delicious!</div>
-        <a class="projectmenu" href="http://www.delicious.calvinbrownlee.com/">delicious.calvinbrownlee</a>
-        <details class="pdetail">
-          <summary>More info</summary>
-          <b>Tech Used:</b> Node.js, Express, MongoDB
-          <hr>
-          <a class="smalllink" href="https://github.com/DrBrowntown/delicious">Github Link</a>
-        </details>
-      </div>
-    </div>
-    <!-- Section detailing relevant skills -->
-    <div class="skills" id="skillsid">
-      <div class="title">
-        Skills
-      </div>
-      <div class="frontskills fade-in fade-in3 shadow">
-        <img class="skillicon b-lazy" data-src="images/frontend.png" alt=" frontend skill icon">
-        <div class="skilltitle">Front End Skills</div>
-        <ul class="skilllist">
-          <li>HTML/CSS</li>
-          <li>JavaScript</li>
-          <li>React.js</li>
-          <li>jQuery</li>
-          <li>Bootstrap</li>
-          <li>Knockout.js</li>
-        </ul>
-      </div>
-      <div class="backskills fade-in fade-in2 shadow">
-        <img class="skillicon b-lazy" data-src="images/backend.png" alt="backend skill icon">
-        <div class="skilltitle">Back End Skills</div>
-        <ul class="skilllist">
-          <li>Node.js</li>
-          <li>MongoDB</li>
-          <li>PostgreSQL/SQLAlchemy</li>
-          <li>Python</li>
-          <li>Flask</li>
-          <li>LAPP Server Admin</li>
-        </ul>
-      </div>
-      <div class="otherskills fade-in shadow">
-        <img class="skillicon b-lazy" data-src="images/otherskills.png" alt="other skill icon">
-        <div class="skilltitle">Other Skills</div>
-        <ul class="skilllist">
-          <li>Git/Github</li>
-          <li>AWS</li>
-          <li>Wordpress</li>
-          <li>Webpack</li>
-          <li>Data Analysis</li>
-          <li>Agile Methodologies</li>
-          <li>Leadership</li>
-        </ul>
-      </div>
-    </div>
-    <footer class="footer" id="footerid">
-      <!-- Footer linking to contact info -->
-      <a href="https://github.com/DrBrowntown">
-        <img data-src="images/github.png" class="contacticon b-lazy" alt="github icon"></a>
-      <a href="https://www.linkedin.com/in/calvinbrownlee/">
-        <img data-src="images/linkedin.png" class="contacticon b-lazy" alt="linkedIn icon"></a>
-      <a href="mailto:calvinbrownlee@gmail.com">
-        <img data-src="images/email.png" class="contacticon b-lazy" alt="email icon"></a>
-    </footer>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script async src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <script src="js/blazy-src.min.js"></script>
-  <script src="js/blazy.js"></script>
-  <script async src="js/styles.min.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      async
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    ></script>
+    <script src="js/blazy-src.min.js"></script>
+    <script src="js/blazy.js"></script>
+    <script async src="js/styles.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115771481-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-115771481-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'UA-115771481-1');
-  </script>
-
-</body>
-
+      gtag("config", "UA-115771481-1");
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya%7CAlegreya+Sans%7CMerriweather%7CMerriweather+Sans%7CNunito%7CNunito+Sans%7CQuattrocento%7CQuattrocento+Sans%7CRoboto%7CRoboto+Mono%7CRoboto+Slab"
+      rel="stylesheet"
+      lazyload
+    />
+  </body>
 </html>
